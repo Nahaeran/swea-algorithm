@@ -1,5 +1,5 @@
 T = int(input())
-for test_case in range(T):
+for tc in range(1, T+1):
     li = [list(map(int, input().split())) for i in range(9)]
     answer = 362880
     result = 0
@@ -23,6 +23,4 @@ for test_case in range(T):
         if mul_c == answer:
             result += 1
 
-    print("#" + str(test_case + 1), 1) if result == 27 else print(
-        "#" + str(test_case + 1), 0
-    )
+    print(f'#{tc} 1') if result == 27 else print(f'#{tc} 0')
