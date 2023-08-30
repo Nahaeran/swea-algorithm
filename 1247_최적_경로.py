@@ -13,8 +13,10 @@ def dfs(idx, lastX, lastY, distance):
             dfs(idx+1, positions[i][0], positions[i][1], temp)
             check_list[i] = True
 
-t = int(input())
-for tc in range(1, t+1):
+
+T = int(input())
+
+for tc in range(1, T + 1):
     n = int(input())
     li = list(map(int, input().split()))
     check_list = [True for _ in range(n)]
@@ -27,4 +29,4 @@ for tc in range(1, t+1):
     min_count = 10000
     
     dfs(0, company[0], company[1], 0)
-    print('#{} {}'.format(tc, min_count))
+    print(f'#{tc} {min_count}')
